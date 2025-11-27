@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* FONT FACE DECLARATIONS */
+@font-face {
+  font-family: 'FontHeader';
+  src: url('/fonts/PlayfairDisplay-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FontBodyRegular';
+  src: url('/fonts/SourceSans3-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FontBodyBold';
+  src: url('/fonts/SourceSans3-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FontBodyItalic';
+  src: url('/fonts/SourceSans3-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@theme {
+  --color-lp-orange: #F57C00;
+  --color-lp-orange-hover: #EF6C00;
+  --color-lp-blue: #1E3A8A;
+  --color-lp-blue-hover: #172554;
+  --color-lp-gray: #E5E7EB;
+  --color-lp-dark: #2D2D2D;
+  --color-lp-light-bg: #F9FAFB;
+  
+  --font-family-header: 'FontHeader', sans-serif;
+  --font-family-body: 'FontBodyRegular', sans-serif;
+}
+
+/* BODY STYLES */
+body {
+  font-family: 'FontBodyRegular', sans-serif;
+  background-color: var(--color-lp-light-bg);
+  color: var(--color-lp-dark);
+}
+
+h1, h2, h3 {
+  font-family: 'FontHeader', sans-serif;
+}
+
+/* INPUT STYLES - FIXED: Changed #000 to Theme Orange */
+input {
+  border: 1px solid #d1d5db; /* Gray-300 default */
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  width: 100%;
+  transition: all 0.2s ease-in-out; /* Smooth transition */
+}
+
+input:focus {
+  border-color: var(--color-lp-orange); /* Changed from #000 to Orange */
+  outline: none;
+  box-shadow: 0 0 0 1px var(--color-lp-orange); /* Optional: Adds a subtle orange glow */
+}
+
+/* BUTTON HOVER STATES */
+.hover\:bg-lp-orange-hover:hover {
+  background-color: var(--color-lp-orange-hover);
+}
+
+.hover\:text-gray-700:hover {
+  color: #374151;
+}
+
+.hover\:underline:hover {
+  text-decoration: underline;
+}
+
+/* OPACITY AND CURSOR STATES */
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
