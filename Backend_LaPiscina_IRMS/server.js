@@ -7,7 +7,7 @@ const app = express();
 app.use(cors({
   origin: [
     "http://localhost:5173", // Ito ang Frontend mo sa Laptop
-    // "https://your-live-site.vercel.app" // Dito mo ilalagay ang Live link sa future
+    "https://irms-testing.vercel.app" // Dito mo ilalagay ang Live link sa future
   ],
   credentials: true, // Importante ito dahil naka-true din sa axios.js
   methods: ["GET", "POST", "PUT", "DELETE"], // Payagan lahat ng methods
